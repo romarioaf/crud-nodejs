@@ -14,5 +14,10 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/romarioaf/crud-nodejs/issues"
+  },
+  "dependencies": {
+    "express": "~4.14.0",
+    "ejs": "~2.4.2",
+    "mysql": "~2.11.1"
   }
 }
