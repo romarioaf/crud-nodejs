@@ -1,5 +1,6 @@
-var app = require('./config/express')();
-var rotasProdutos = require('./app/routes/produtos')(app);
+var express = require('./config/express');
+
+console.log("Tentando iniciar");
 
 app.listen(3000, function () {
 	console.log("Servidor Rodando.");
