@@ -3,17 +3,14 @@ var load = require('express-load');
 
 module.exports = function() {
 
-	var app = express();	
+	var app = express();
 
-	console.log('Módulo de configuração do Express carregado.');
+    app.set('view engine', 'ejs');
+    app.set('views','./app/views');
 
+    load('routes',{cwd: 'app'})
+        .then('infra')
+        .into(app);
 
-	app.set('view engine', 'ejs');
-	app.set('views', './app/views');
-
-	load('routes', {cwd: 'app'})
-		.then('infra')
-		.into(app);
-
-	return app;
+    return app;
 }

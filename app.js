@@ -1,4 +1,4 @@
-var express = require('./config/express');
+var app = require('./config/express')();
 
 console.log("Tentando iniciar");
 
