@@ -11,6 +11,7 @@ module.exports = function() {
 
     //midleware
     app.use(bodyParser.urlencoded({extended : true}));//é aplicada antes da requisição chegar na função
+    app.use(bodyParser.json());
 
     load('routes',{cwd: 'app'})
         .then('infra')
