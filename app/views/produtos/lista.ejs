@@ -1,21 +1,41 @@
-<html>
+	<html>
+	<head>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
 	<body>
-		<table border="1">
-			<tr>
-				<td>Id</td>
-				<td>Nome</td>
-				<td>Descrição</td>
-				<td>Preço</td>
-			</tr>
-			
-				<% for (var i = 0; i < lista.length; i++) { %>
+		
+		<div class="container">
+			<div class="page-header">
+				<h1>Produtos</h1>
+			</div>
+			<table class="table">
 				<tr>
-					<td> <%= lista[i].id %> </td>
-					<td> <%= lista[i].titulo %> </td>
-					<td> <%= lista[i].descricao %> </td>
-					<td> <%= lista[i].preco %> </td>
+					<td>Id</td>
+					<td>Nome</td>
+					<td>Descrição</td>
+					<td>Preço</td>
+					<td></td>
 				</tr>
-				<% } %>
-		</table>
+				
+					<% for (var i = 0; i < lista.length; i++) { %>
+					<tr>
+						<td> <%= lista[i].id %> </td>
+						<td> <%= lista[i].titulo %> </td>
+						<td> <%= lista[i].descricao %> </td>
+						<td> <%= lista[i].preco %> </td>
+						<td><a href="/produtos/delete/<%= lista[i].id %>"><button>Excluir</button></a></td>
+					</tr>
+					<% } %>
+			</table>
+			<div class="row">
+				<div class="col-md-5">
+					<a href="/produtos/form"><button class="btn btn-primary">Adicionar</button></a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

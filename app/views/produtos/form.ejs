@@ -2,25 +2,35 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<div class="container">
 
-	<form action="/produtos" method="POST">
-		<dir>
-			<label for="titulo">Titulo</label>
-			<input type="text" id="titulo" name="titulo" placeholder="Como Programar">
-		</dir>
-		<dir>
-			<label for="descricao">Descricao</label>
-			<textarea cols="10" rows="10" id="descricao" name="descricao" placeholder="Descrição do livro"></textarea>
-		</dir>
-		<dir>
-			<label for="preco">Preço</label>
-			<input type="text" id="preco" name="preco" placeholder="150.25">
-		</dir>
-
-		<input type="submit" name="" value="Salvar">
-	</form>
-
+		<form action="/produtos" method="POST">
+			<div class="form-group">
+				<dir>
+					<label for="titulo">Titulo</label>
+					<input type="text" id="titulo" name="titulo" placeholder="Como Programar" class="form-control">
+				</dir>
+				<dir>
+					<label for="descricao">Descricao</label>
+					<textarea cols="10" rows="10" id="descricao" name="descricao" placeholder="Descrição do livro" class="form-control"></textarea>
+				</dir>
+				<dir>
+					<label for="preco">Preço</label>
+					<input type="text" id="preco" name="preco" placeholder="150.25" class="form-control">
+				</dir>
+				<dir>
+					<input type="submit" name="" value="Salvar" class="btn btn-primary">
+					<a href="/produtos/lista"><button class="btn btn-secondary">Cancelar</button></a>
+				</dir>
+			</div>
+		</form>
+	</div>
 </body>
 </html>
